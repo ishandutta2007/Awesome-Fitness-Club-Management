@@ -4,7 +4,7 @@
 
 <p aggregate-align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Fitness-Club-Management"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Fitness-Club-Management?style=social" alt="GitHub Stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Fitness-Club-Management"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Fitness-Club-Management?style=social" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Fitness-Club-Management/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Fitness-Club-Management?color=blue" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
 </p>
@@ -60,7 +60,7 @@ The following tabular breakdown ranks leading commercial fitness management SaaS
 
 ## 🔓 Open-Source GitHub Projects
 
-For gym owners, self-hosters, privacy-conscious operators, and developers looking to build custom fitness club management software, the following open-source solutions provide community-maintained codebases. Sorted by GitHub Star count.
+For gym owners, self-hosters, privacy-conscious operators, and developers looking to build custom fitness club management software, the following open-source solutions provide community-maintained codebases. Sorted by GitHub Stars_Count.
 
 - **[wger](https://github.com/wger-project/wger)**  
   [![wger Stars](https://img.shields.io/github/stars/wger-project/wger?style=social&color=white)](https://github.com/wger-project/wger/stargazers)  
