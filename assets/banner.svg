@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="50%" stop-color="#1E1B4B"/>
+      <stop offset="100%" stop-color="#311042"/>
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="cyan-glow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3B82F6" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="purple-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#818CF8"/>
+      <stop offset="100%" stop-color="#F472B6"/>
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#FFFFFF" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .pulse-circle {
+      animation: pulse 4s ease-in-out infinite alternate;
+    }
+    .float-card {
+      animation: float 6s ease-in-out infinite alternate;
+    }
+    .wave-line {
+      stroke-dasharray: 800;
+      stroke-dashoffset: 800;
+      animation: dash 8s linear infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1) translate(0, 0); opacity: 0.4; }
+      100% { transform: scale(1.15) translate(-10px, 15px); opacity: 0.8; }
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(-12px); }
+    }
+    @keyframes dash {
+      to { stroke-dashoffset: 0; }
+    }
+    .title-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 800;
+      font-size: 46px;
+      fill: url(#text-grad);
+    }
+    .subtitle-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 500;
+      font-size: 20px;
+      fill: #94A3B8;
+    }
+    .badge-text {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      fill: #38BDF8;
+    }
+  </style>
+
+  <!-- Base Layer Background -->
+  <rect width="1200" height="360" fill="url(#bg-grad)" rx="16"/>
+  <rect width="1200" height="360" fill="url(#grid)" rx="16"/>
+
+  <!-- Dynamic / Animated Background Graphics (Behind Text Elements) -->
+  <g class="pulse-circle">
+    <circle cx="950" cy="180" r="160" fill="url(#purple-glow)" filter="blur(40px)" />
+    <circle cx="200" cy="100" r="120" fill="url(#cyan-glow)" filter="blur(30px)" />
+  </g>
+
+  <!-- Decorative Wave / Chart Lines in Background -->
+  <path d="M -50 280 Q 250 180 550 250 T 1150 150 T 1300 220" fill="none" stroke="#38BDF8" stroke-opacity="0.25" stroke-width="3" class="wave-line" />
+  <path d="M -50 310 Q 300 220 600 290 T 1200 190" fill="none" stroke="#818CF8" stroke-opacity="0.2" stroke-width="2" />
+
+  <!-- Floating Decorative Cards (Right Side Graphics) -->
+  <g class="float-card" transform="translate(820, 60)">
+    <!-- Glassmorphism Card 1 -->
+    <rect x="0" y="0" width="280" height="100" rx="12" fill="#0F172A" fill-opacity="0.6" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="35" cy="50" r="18" fill="#0EA5E9" fill-opacity="0.2"/>
+    <path d="M 28 50 L 33 55 L 42 43" fill="none" stroke="#38BDF8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="70" y="42" font-family="sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC">Gym CRM &amp; Billing</text>
+    <text x="70" y="65" font-family="sans-serif" font-size="12" fill="#64748B">Automated Recurring Payments</text>
+  </g>
+
+  <g class="float-card" transform="translate(860, 180)">
+    <!-- Glassmorphism Card 2 -->
+    <rect x="0" y="0" width="270" height="90" rx="12" fill="#0F172A" fill-opacity="0.7" stroke="#334155" stroke-width="1.5"/>
+    <circle cx="35" cy="45" r="18" fill="#8B5CF6" fill-opacity="0.2"/>
+    <path d="M 28 45 L 42 45 M 35 38 L 35 52" fill="none" stroke="#A78BFA" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="70" y="38" font-family="sans-serif" font-size="14" font-weight="bold" fill="#F8FAFC">Class Scheduling</text>
+    <text x="70" y="60" font-family="sans-serif" font-size="12" fill="#64748B">Member App &amp; Access Control</text>
+  </g>
+
+  <!-- FOREGROUND TEXT CONTENT (Guaranteed Unobscured) -->
+  <g transform="translate(70, 0)">
+    <!-- Category Pill Badge -->
+    <g transform="translate(0, 75)">
+      <rect width="250" height="30" rx="15" fill="#0369A1" fill-opacity="0.3" stroke="#0284C7" stroke-width="1"/>
+      <text x="15" y="20" class="badge-text">🏋️ FITNESS TECH ECOSYSTEM</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="160" class="title-text">Awesome Fitness Club Management</text>
+
+    <!-- Subtitle -->
+    <text x="0" y="205" class="subtitle-text">Curated SaaS Platforms, Gym CRMs &amp; Open-Source Club Software</text>
+
+    <!-- Feature Highlight Bullets -->
+    <g transform="translate(0, 245)">
+      <!-- Tag 1 -->
+      <rect x="0" y="0" width="160" height="32" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="16" y="21" font-family="sans-serif" font-size="13" fill="#E2E8F0">⚡ Gym Operations</text>
+
+      <!-- Tag 2 -->
+      <rect x="175" y="0" width="160" height="32" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="191" y="21" font-family="sans-serif" font-size="13" fill="#E2E8F0">💳 Class Booking</text>
+
+      <!-- Tag 3 -->
+      <rect x="350" y="0" width="170" height="32" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1"/>
+      <text x="366" y="21" font-family="sans-serif" font-size="13" fill="#E2E8F0">🔓 Open-Source CRMs</text>
+    </g>
+  </g>
+</svg>
